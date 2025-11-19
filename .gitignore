@@ -5,6 +5,7 @@ out/
 .kotlin
 .iml
 .idea/
+Dam-intelliJ.iml
 
 ### Eclipse ###
 .apt_generated
