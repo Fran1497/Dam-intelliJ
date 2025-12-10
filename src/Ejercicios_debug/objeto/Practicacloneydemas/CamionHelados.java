@@ -14,6 +14,10 @@ public class CamionHelados {
         this.consumidoresFelices = 0;
     }
 
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
     public String getinfo() {
         return String.format("""
                 Modelo: %s
