@@ -2,7 +2,7 @@ package Ejercicios_debug;
 
 import java.util.Scanner;
 
-public class Ejmio {
+public class SEjmio {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Cuantas hectares tienes");
