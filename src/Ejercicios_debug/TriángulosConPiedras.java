@@ -36,11 +36,18 @@ to_do lo anterior (de piedras en los pisos) y un piso con una piedra mas.
             for (int i=0 ; piso > i ; i++){
               suma = (unidad_de_piedra)*i + suma;
             }
+            int suma_aux = suma;
             if (suma == piedra){
-                System.out.println("Cantidad de piedras justas tenemos esta cantidad de pisos: " + piso);
+                System.out.println("tenemos esta cantidad de pisos: " + piso);
+                System.out.println("Esta es la cantidad de piedras usadas: " + suma_aux);
                 aviso = 0;
             } else if (suma > piedra) {
                 suma = 0 ;
+            } else if (suma < piedra) {
+                System.out.println("tenemos esta cantidad de pisos: " + (piso-1));
+                System.out.println("Esta es la cantidad de piedras usadas: " + suma_aux);
+                System.out.println("Esta es la cantidad de piedras sobrantes: " + (piedra-suma_aux));
+
             }
             piso ++;
         }
