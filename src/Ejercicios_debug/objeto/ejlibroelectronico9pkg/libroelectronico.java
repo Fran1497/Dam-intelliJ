@@ -1,4 +1,4 @@
-package Ejercicios_debug.objeto.ejlibroelectronico9;
+package Ejercicios_debug.objeto.ejlibroelectronico9pkg;
 
 
 

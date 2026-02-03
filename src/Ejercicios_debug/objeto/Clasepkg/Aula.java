@@ -1,4 +1,4 @@
-package Ejercicios_debug.objeto;
+package Ejercicios_debug.objeto.Clasepkg;
 
 import java.util.Scanner;
 

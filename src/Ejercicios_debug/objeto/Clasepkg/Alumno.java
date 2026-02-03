@@ -1,6 +1,4 @@
-package Ejercicios_debug.objeto;
-
-import java.util.Scanner;
+package Ejercicios_debug.objeto.Clasepkg;
 
 public class Alumno {
     private final String nombre;

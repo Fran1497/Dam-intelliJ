@@ -1,4 +1,4 @@
-package Ejercicios_debug.objeto.Practicacloneydemas;
+package Ejercicios_debug.objeto.Practicacloneydemaspkg;
 
 import java.util.Scanner;
 

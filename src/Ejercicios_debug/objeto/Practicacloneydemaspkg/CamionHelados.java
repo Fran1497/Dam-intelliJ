@@ -1,4 +1,4 @@
-package Ejercicios_debug.objeto.Practicacloneydemas;
+package Ejercicios_debug.objeto.Practicacloneydemaspkg;
 
 public class CamionHelados {
 
