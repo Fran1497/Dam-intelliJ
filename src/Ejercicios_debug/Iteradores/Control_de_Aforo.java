@@ -15,6 +15,7 @@ Se debe devolver la lista final y el número total de eliminaciones.
 package Ejercicios_debug.Iteradores;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -23,31 +24,38 @@ public class Control_de_Aforo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        List<Integer> PersonasEdad = new ArrayList<>();
+        List<Integer> personasEdad = new ArrayList<>();
 
-        var NumeroDePersonas = sc.nextInt();
-        int aux =0;
-        boolean auxB= true;
-
-        while (auxB){
-            if (auxB){
-                aux = sc.nextInt();
-            }
-            if (aux < 0){
-                aux = 0;
-                 auxB = false;
-            } else if (aux != 0 ){
-                PersonasEdad.add(aux);
-            }
-
-
+        // Lectura de edades hasta que llegue un 0
+        System.out.println("Dame la edad; ");
+        int edad = sc.nextInt();
+        while (edad != 0) {
+            personasEdad.add(edad);
+            System.out.println("Dame la edad; ");
+            edad = sc.nextInt();
         }
 
+        // Lectura de la edad límite
+        System.out.println("Edad limite; ");
+        int edadLimite = sc.nextInt();
 
+        // Eliminación de menores
+        int eliminados = 0;
+        Iterator<Integer> it = personasEdad.iterator();
 
+        while (it.hasNext()) {
+            if (it.next() < edadLimite) {
+                it.remove();
+                eliminados++;
+            }
+        }
 
+        // Salida
+        System.out.println(personasEdad);
+        System.out.println(eliminados);
     }
 }
+
 
 
 
