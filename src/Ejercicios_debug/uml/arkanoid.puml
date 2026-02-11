@@ -1,0 +1,16 @@
+@startuml
+class Pedido {
+  -idPedido: String
+  -fecha: Date
+  +calcularTotal(): double
+}
+
+class Producto {
+  -idProducto: int
+  -nombre: String
+  -precio: double
+}
+
+' Asociación N-M (Muchos a Muchos)
+Pedido -- Producto
+@enduml

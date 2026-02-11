@@ -1,4 +1,4 @@
-package Ejercicios_debug.Array;
+package Ejercicios_debug.array;
 
 import java.util.Scanner;
 

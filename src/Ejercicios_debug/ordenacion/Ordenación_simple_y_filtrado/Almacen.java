@@ -1,4 +1,4 @@
-package Ejercicios_debug.Ordenacion.Ordenación_simple_y_filtrado;
+package Ejercicios_debug.ordenacion.Ordenación_simple_y_filtrado;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package Ejercicios_debug.Funciones;
+package Ejercicios_debug.funciones;
 
 public class Funcionesvarias {
     public static int NumMaximo(int[] numeros) {

@@ -1,4 +1,4 @@
-package Ejercicios_debug.Ordenacion;
+package Ejercicios_debug.ordenacion;
 
 import java.util.Arrays;
 import java.util.Random;

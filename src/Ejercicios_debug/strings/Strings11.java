@@ -1,4 +1,4 @@
-package Ejercicios_debug.Strings;
+package Ejercicios_debug.strings;
 
 import java.util.Scanner;
 

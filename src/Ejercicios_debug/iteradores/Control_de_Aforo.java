@@ -12,7 +12,7 @@ Salida
 Se debe devolver la lista final y el número total de eliminaciones.
 */
 
-package Ejercicios_debug.Iteradores;
+package Ejercicios_debug.iteradores;
 
 import java.util.ArrayList;
 import java.util.Iterator;

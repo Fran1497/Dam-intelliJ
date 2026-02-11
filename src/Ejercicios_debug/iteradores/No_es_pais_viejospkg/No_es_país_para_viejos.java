@@ -1,4 +1,4 @@
-package Ejercicios_debug.Iteradores.No_es_pais_viejospkg;
+package Ejercicios_debug.iteradores.No_es_pais_viejospkg;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
