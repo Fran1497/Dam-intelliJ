@@ -1,0 +1,30 @@
+@startuml
+class Contenido_Multimedia{
+    -Duracion : int
+}
+class Usuario{
+    -Nombre : String
+    -Contraseña : String
+    +Seleccionar contenido
+    +Marcar favorito : Pelicula
+    +Marcar favorito : Serie
+}
+class Pelicula{
+    -Favorito : boolean
+}
+class Serie{
+    -Numero de temporadas : int
+    -List<Episodios>
+    -Llamado : boolean
+
+}
+class Episodios{
+    -Perteneciente a serie : String Serie
+
+}
+
+Contenido_Multimedia <|-- Pelicula
+Contenido_Multimedia <|-- Serie
+Serie "1" *-- "1...*" Episodios
+Usuario "*"--"*" Contenido_Multimedia : consume
+@enduml

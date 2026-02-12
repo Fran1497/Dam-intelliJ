@@ -1,0 +1,19 @@
+@startuml
+
+class Ordenador{
+    -PlacaBase : this.Placa
+    -Procesador : this.Procesador
+    -MemoriaRAM : this.MemoriaRAM
+}
+class PlacaBase{
+}
+class Procesador{
+}
+class MemoriaRAM{
+}
+
+
+Ordenador "1" o-- "1" PlacaBase
+Ordenador "1" o-- "1" Procesador
+Ordenador "1" o-- "1...*" MemoriaRAM
+@enduml
