@@ -1,16 +1,96 @@
 @startuml
-class Pedido {
-  -idPedido: String
-  -fecha: Date
-  +calcularTotal(): double
-}
 
-class Producto {
-  -idProducto: int
-  -nombre: String
-  -precio: double
+
+class Game{
+    -Window : window
+    -running : false
+    +setScene : nextScene(Scene)
+}
+class GameObject{
+    -Scene : scene
+    -speedX | speedY
+    -width | height
+    -x | y
+    +update : delta
+    +render : Graphics2D g
+    +getBounds : Rectangle
+    +intersects : GameObject other
+}
+class GameState{
+    -score: int
+    -lives : int
+    -level: int
+    +GameState
+    +reset
+    +addScore
+    +loseLife
+    +addLife
+}
+note Left of GameState
+    No tiene uso
+end note
+
+class InputHandler{
+    -keys : boolean[256]
+    -up down left right space
+    -keysLast : boolean[256]
+}
+class Window{
+    -Canvas : canvas
+    +Crear lienzo : canvas
+
+}
+class Scene{
+    -List<GameObject> : objects
+    -List<GameObject> : toRemove
+    -Game : game
+    -InputHandler : input
+    -Color : backgroundColor
+    +addObject : GameObject obj
+    +removeObject : GameObject obj
+}
+class Bricks{
+    -Brick
+    -HardBrick
+    -MovableBrick
+}
+class Brick{
+    +onCollision : GameObject other
+    +render : Graphics2D g
+}
+class HardBrick{
+    +onCollision : GameObject other
+    +render : Graphics2D g
+}
+class MovableBrick{
+    +onCollision : GameObject other
+    +update : float delta
+}
+class Ball{
+    +onCollision : GameObject other
+    +update : float delta
+    +render : Graphics2D g
+}
+class DeadLine{
+    +render : Graphics2D g
+}
+class Player{
+    +update : delta
+    +render : Graphics2D g
 }
 
 ' Asociación N-M (Muchos a Muchos)
-Pedido -- Producto
+Game -- Window
+Game -- DeadLine
+Game -- Player
+Game -- Scene
+GameObject -- Scene
+InputHandler -- Scene
+GameObject -- Player
+GameObject -- Ball
+GameObject -- DeadLine
+GameObject -- Bricks
+Bricks -- Brick
+Bricks -- HardBrick
+Bricks -- MovableBrick
 @enduml
