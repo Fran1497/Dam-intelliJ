@@ -1,57 +1,68 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+/*Debemos de primero aceptar el numero de potitos que queremos incluir dentro de la evaluacion y luego debemos de
+ * darle si ha querido tomarselo o no seguido de los ingredientes que hay
+ *
+ * Sabiendo esto hay que analizar tdos los productos que salen el la parte mala y si esos productos solo aparece hay
+ * y no en otro lado pueden ser malos en cambio si aparecen hay y en otro lado no pueden ser productos no deseados.
+ * PRUEBA:
+3
+SI: patata maíz tomate FIN
+NO: patata puerro guisantes pollo FIN
+SI: tomate zanahoria puerro pollo calabacín arroz FIN
+2
+SI: tomate zanahoria pollo calabacín arroz FIN
+NO: tomate ternera puerro FIN
+0
+ * */
+
+import java.util.*;
 
 public class ComidasPreferidas {
 
-    /*Debemos de primero aceptar el numero de potitos que queremos incluir dentro de la evaluacion y luego debemos de
-     * darle si ha querido tomarselo o no seguido de los ingredientes que hay
-     *
-     * Sabiendo esto hay que analizar tdos los productos que salen el la parte mala y si esos productos solo aparece hay
-     * y no en otro lado pueden ser malos en cambio si aparecen hay y en otro lado no pueden ser productos no deseados.*/
-
     public static void main(String[] args) {
-        //Numeros de potitos
+        Scanner sc = new Scanner(System.in);
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("¿Cuantos potitos?");
-        var cantidad = scanner.nextInt();
-        class Verduras {
-            private String tipo;
+        while (true) {
+            int n = Integer.parseInt(sc.nextLine());
+            if (n == 0) break;
 
-            public String getTipo() {
-                return tipo;
-            }
+            Set<String> malos = new HashSet<>();
+            Set<String> buenos = new HashSet<>();
 
-            public Verduras(String tipo) {
-                this.tipo = tipo;
-            }
+            for (int i = 0; i < n; i++) {
+                String linea = sc.nextLine();
+                String[] partes = linea.split(" ");
 
-        }
-        List<Verduras> malas = new ArrayList<>();
-        List<Verduras> buenas = new ArrayList<>();
+                boolean Comido = partes[0].equals("SI:");
 
-        for (int i = 0; i == cantidad - 1; i++) {
-            var cond = scanner.nextLine();
-            String condiciondesalida = null;
-            if (cond == "YES") {
-                while (condiciondesalida != "FIN") {
-                    buenas.add(new Verduras(scanner.nextLine()));
-                    if (buenas.getLast().getTipo() == "FIN") {
-                        buenas.removeLast();
+                for (int j = 1; j < partes.length; j++) {
+                    if (partes[j].equals("FIN")){
                         break;
                     }
-                }
-            } else {
-                malas.add(new Verduras(scanner.nextLine()));
-                if (malas.getLast().getTipo() == "FIN") {
-                    malas.removeLast();
-                    break;
+                    if (Comido) {
+                        buenos.add(partes[j]);
+                    } else {
+                        malos.add(partes[j]);
+                    }
                 }
             }
 
-            scanner.close();
+            // Ingredientes malos = malos - buenos
+            malos.removeAll(buenos);
 
+            // Ordenar alfabéticamente
+            List<String> resultado = new ArrayList<>(malos);
+            Collections.sort(resultado);
+
+            // Imprimir
+            if (resultado.isEmpty()) {
+                System.out.println();
+            } else {
+                System.out.println(String.join(" ", resultado));
+            }
         }
+
+        sc.close();
     }
 }
+
+
