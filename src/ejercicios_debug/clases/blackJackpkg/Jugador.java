@@ -1,4 +1,4 @@
-package ejercicios_debug.clases.BlackJackpkg;
+package ejercicios_debug.clases.blackJackpkg;
 
 import java.util.Scanner;
 

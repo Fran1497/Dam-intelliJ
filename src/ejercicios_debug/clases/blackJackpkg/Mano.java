@@ -1,4 +1,4 @@
-package ejercicios_debug.clases.BlackJackpkg;
+package ejercicios_debug.clases.blackJackpkg;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ public class Mano {
 
         // 2. Ajustar Ases si la suma se pasa
         while (suma > 21 && ases > 0) {
-            suma -= 10;   // Convertir un As de 11 → 1
+            suma -= 10;   // Convertir un As de 11 a 1
             ases--;       // Ya no queda ese As para ajustar
         }
 

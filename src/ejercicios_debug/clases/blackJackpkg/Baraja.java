@@ -1,4 +1,4 @@
-package ejercicios_debug.clases.BlackJackpkg;
+package ejercicios_debug.clases.blackJackpkg;
 
 
 import java.util.ArrayList;
@@ -22,8 +22,6 @@ public class Baraja {
         for (int j = 0; j < 13; j++) {
             cartas.add(new Carta(j + 1, "Picas", "Carta numero " + (j+1) + " del palo Picas"));
         }
-
-
     }
 
     public void barajar() {
