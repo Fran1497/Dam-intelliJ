@@ -1,6 +1,7 @@
 package ejercicios_debug.clases.blackJackpkg;
 
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class JuegoBlackjack {
@@ -94,6 +95,7 @@ public class JuegoBlackjack {
 
 
     public static void main(String[] args) {
+        //JOptionPane.showMessageDialog(null,"Hola"); para mostrar la vaentana para el mastermind
 
         Jugador jugador = new Jugador("Francisco");
         JuegoBlackjack juego = new JuegoBlackjack(jugador);

@@ -1,9 +1,10 @@
 package ejercicios_debug.clases.buscaminaspkg;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Buscaminas {
-    static void main() {
+    public static void main() {
         Scanner sc = new Scanner(System.in);
         Tablero tablero = new Tablero();
         System.out.println(tablero);

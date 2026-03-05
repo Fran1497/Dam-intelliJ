@@ -1,5 +1,6 @@
 package ejercicios_debug.clases.buscaminaspkg;
 
+import javax.swing.*;
 import java.awt.*;
 import java.util.Arrays;
 import java.util.Random;
