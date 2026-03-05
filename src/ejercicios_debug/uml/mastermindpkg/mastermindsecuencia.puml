@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+== Initialization ==
+actor Player
+
+Player --> Mastermind : ejecutar programa
+Mastermind --> Codificador : Manda a que cree el codigo
+Codificador --> Codigo : Hace el codigo
+Codigo --> Mastermind : El codigo se manda a Mastermind
+
+
+== Repetition ==
+Mastermind --> Player : Le pregunta codigo
+Player --> Mastermind : Le dice codigo
+Mastermind --> Codificador : Le pide comprobar codigo
+Codificador --> Mastermind : Le da el resultado
+Mastermind --> Player : Muestra el resultado
+
+== Resultado ==
+Mastermind --> Player : Le muestra la pantalla de victoria
+
+@enduml

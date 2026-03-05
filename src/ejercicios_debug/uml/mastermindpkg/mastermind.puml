@@ -1,0 +1,25 @@
+@startuml
+class Codigo{
+    -Longitud : int
+    -numeros :String
+}
+
+class Mastermind{
+    -codigo : Codigo
+    +Muestra mesajes
+    +comunica Codificador -- Jugador
+}
+
+
+
+class Codificador{
++ crea codigo
++ Da las resoluciones post intervencion del Jugador
+}
+
+
+Codigo -- Codificador
+Codificador -- Mastermind
+Mastermind <|-- Codigo
+
+@enduml

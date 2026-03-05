@@ -1,4 +1,4 @@
-package ejercicios_debug.uml.PlataformaDeStreamingDeVideopkg;
+package ejercicios_debug.uml.plataformaDeStreamingDeVideopkg;
 
 public class PlataformaDeStreamingDeVideo {
 

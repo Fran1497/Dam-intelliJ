@@ -1,4 +1,4 @@
-package ejercicios_debug.uml.CatalogoDeComponentesPCpkg;
+package ejercicios_debug.uml.catalogoDeComponentesPCpkg;
 
 public class CatalogoDeComponentesPC {
 
