@@ -1,4 +1,4 @@
-/*Debemos de primero aceptar el numero de potitos que queremos incluir dentro de la evaluacion y luego debemos de
+package ejercicios_debug;/*Debemos de primero aceptar el numero de potitos que queremos incluir dentro de la evaluacion y luego debemos de
  * darle si ha querido tomarselo o no seguido de los ingredientes que hay
  *
  * Sabiendo esto hay que analizar tdos los productos que salen el la parte mala y si esos productos solo aparece hay
