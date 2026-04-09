@@ -19,7 +19,7 @@ public class RakingEstudiantes {
             suma = notas.get(i) + suma;
             contador++;
         }
-        media= suma/contador;
+        media= (double) suma /contador;
         return media;
     }
 
