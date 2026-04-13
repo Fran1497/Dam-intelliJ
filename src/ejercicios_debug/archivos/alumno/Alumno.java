@@ -29,10 +29,10 @@ public class Alumno {
 
         List alumnos = List.of(
                 new Alumno("Paco1",10),
-                new Alumno("Paco2",10),
-                new Alumno("Paco3",10),
-                new Alumno("Paco4",10),
-                new Alumno("Paco5",10)
+                new Alumno("Paco2",9),
+                new Alumno("Paco3",0),
+                new Alumno("Paco4",8),
+                new Alumno("Paco5",5)
         );
         try {
             for (int i = 0; i < alumnos.size(); i++) {
