@@ -20,20 +20,33 @@ public class _3_Layout extends JFrame {
         panelPrincipal.setLayout(new BorderLayout());
 
         // arriba 1 button
-        JButton botonArriba = new JButton("Arriba");
-        panelPrincipal.add(botonArriba, BorderLayout.NORTH);
+        JTextField textFieldNumeros = new JTextField();
+        panelPrincipal.add(textFieldNumeros, BorderLayout.NORTH);
 
         // Centro 4 buttons
         panelCentral = new JPanel();
-        panelCentral.setLayout(new GridLayout(2,2));
-        panelCentral.add(new JButton("C1"));
-        panelCentral.add(new JButton("C2"));
-        panelCentral.add(new JButton("C3"));
-        panelCentral.add(new JButton("C4"));
+        panelCentral.setLayout(new GridLayout(4,4));
+        panelCentral.add(new JButton("1"));
+        panelCentral.add(new JButton("2"));
+        panelCentral.add(new JButton("3"));
+        panelCentral.add(new JButton("+"));
+        panelCentral.add(new JButton("4"));
+        panelCentral.add(new JButton("5"));
+        panelCentral.add(new JButton("6"));
+        panelCentral.add(new JButton("-"));
+        panelCentral.add(new JButton("7"));
+        panelCentral.add(new JButton("8"));
+        panelCentral.add(new JButton("9"));
+        panelCentral.add(new JButton("x"));
+        panelCentral.add(new JButton("0"));
+        panelCentral.add(new JButton("."));
+        panelCentral.add(new JButton("C"));
+        panelCentral.add(new JButton("/"));
+
         panelPrincipal.add(panelCentral, BorderLayout.CENTER);
 
         // abajo 1 button
-        botonAceptar = new JButton("Abajo");
+        botonAceptar = new JButton("=");
         panelPrincipal.add(botonAceptar, BorderLayout.SOUTH);
 
         this.add(panelPrincipal);
