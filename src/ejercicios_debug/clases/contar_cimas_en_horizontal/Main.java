@@ -7,30 +7,19 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int montanas_altas =0;
-        System.out.println("Dame las columnas y todos las alturas");
-            int columas = sc.nextInt();
-        ArrayList<AccidenteGeografico> ej= new ArrayList<>();
-        for (int i = 0; i < columas; i++) {
-            ej.add(new AccidenteGeografico(sc.nextInt()));
-        }
-        Mapa vector = new Mapa(ej);
 
-        int MAX = Integer.MIN_VALUE;
-        for (int i = 0; i < vector.getVector().size(); i++) {
-            int actual = ej.get(i).getAltura();
+        System.out.println("Dame las columnas y todas las alturas:");
+        int columnas = sc.nextInt();
 
-            for (int j = 0; j < columas; j++) {
-                int actualcomp = ej.get(j).getAltura();
-                if (actual > MAX){
-                    if (actual> actualcomp){
-                        MAX = actual;
-                        ++montanas_altas;
-                    }
-                }
-            }
+        ArrayList<AccidenteGeografico> lista = new ArrayList<>();
+
+        for (int i = 0; i < columnas; i++) {
+            lista.add(new AccidenteGeografico(sc.nextInt()));
         }
-        System.out.println(montanas_altas);
+
+        Mapa mapa = new Mapa(lista);
+
+        int totalCimas = mapa.contarCimas();
+        System.out.println(totalCimas);
     }
-
 }
